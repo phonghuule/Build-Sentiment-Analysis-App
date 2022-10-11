@@ -1,7 +1,8 @@
-This lab is provided as part of **[AWS Innovate Modern Applications Edition](https://aws.amazon.com/events/aws-innovate/apj/modern-apps/)**
-Click [here](https://github.com/phonghuule/aws-innovate-data) to explore the full list of hands-on labs.
-:information_source: You will run this lab in your own AWS account in **us-east-1**. Please follow directions at the end of the lab to remove resources to avoid future costs.
+This lab is provided as part of **[AWS Innovate Modern Applications Edition](https://aws.amazon.com/events/aws-innovate/apj/modern-apps/)**. 
 
+Click [here](https://github.com/phonghuule/aws-innovate-modern-applications-2022) to explore the full list of hands-on labs.
+
+ℹ️ You will run this lab in your own AWS account. Please follow directions at the end of the lab to remove resources to avoid future costs.
   
 # Build a Sentiment Analysis App in minutes using Amplify Framework
 
@@ -13,11 +14,11 @@ In this lab we will demonstrate how to add the AI and ML cloud service feature t
 
 The above mentioned are a subset of services that can be added using AWS Amplify. Apart from these, You can provision, attach and use AWS AppSync(GraphQL API), API Gateway (REST API), Amazon S3(Storage), AWS Lambda (Functions), Amazon Pinpoint (Analytics), Amazon Lex (Interactions/Chatbots) etc to your application using AWS Amplify.
 
-# Setting Up the Lab Environment
+## Setting Up the Lab Environment
 
 To run this lab, you will require an AWS account. You will be using a Cloud9, which is a web-based development environment that provides a terminal program running on a virtual machine that has the AWS CLI pre-installed and configured.
 
-For best experience, it's recommended to use Chrome Browser for this lab
+For best experience, it's recommended to use **Chrome Browser** for this lab
 
 
 1. Login to your AWS Account
@@ -55,7 +56,7 @@ For rest of config use default values and click Next Step.
 8. Switch to projects root directory
 	
 	```
-	cd sentimentAnalysisLab
+	cd Build-Sentiment-Analysis-App
 	
 	npm install
 	```
@@ -79,7 +80,7 @@ Inside root directory of project run following command and provide the provided 
 amplify init
 `
 
-`Enter a name for the project:` **sentimentAnalysisLab**
+`Enter a name for the project:` **BuildSentimentAnalys**
 
 `Enter a name for the environment:` **dev**
 
@@ -106,7 +107,7 @@ The AWS Amplify CLI will initialize a new project inside your React project & yo
 
 ## Add Authentication to the Web Application
 
-Amplify CLI provisions [Amazon Cognito](https://aws.amazon.com/cognito/) as backend to provide authN/authZ support for your application. Below command and selected options will create a cloudformation template to provision the Amazon Cognito resource locally under PROJECT_ROOT_DIR/amplify/auth/NAME_OF_COGNITO_RESOURCE folder
+Amplify CLI provisions [Amazon Cognito](https://aws.amazon.com/cognito/) as backend to provide authN/authZ support for your application. Below command and selected options will create a cloudformation template to provision the Amazon Cognito resource locally under PROJECT_ROOT_DIR/amplify/backend/auth/NAME_OF_COGNITO_RESOURCE folder
 
 `amplify add auth`
 
@@ -119,7 +120,7 @@ How do you want users to be able to sign in?` **Username**
 
 ## Add functionality to Transcribe text from audio
 
-Amplify CLI provisions [Amazon Transcribe](https://aws.amazon.com/transcribe/) as backend to add speech-to-text functionality to your application. Below command and options will create a cloudformation template to provision the the Amazon Transcribe resource locally in your project under PROJECT_ROOT_DIR/amplify/predictions/NAME_OF_CONVERT_RESOURCE folder.
+Amplify CLI provisions [Amazon Transcribe](https://aws.amazon.com/transcribe/) as backend to add speech-to-text functionality to your application. Below command and options will create a cloudformation template to provision the the Amazon Transcribe resource locally in your project under PROJECT_ROOT_DIR/amplify/backend/predictions/NAME_OF_CONVERT_RESOURCE folder.
 
 `amplify add Predictions`
 
@@ -137,7 +138,7 @@ Amplify CLI provisions [Amazon Transcribe](https://aws.amazon.com/transcribe/) a
 
 ## Add functionality to Interpret the text
 
-Amplify CLI provisions [Amazon Comprehend](https://aws.amazon.com/comprehend/) a natural language processing (NLP) service as backend to provide ability to interpret text and perform sentiment analysis. No machine learning experience is required for this feature. Below command and options will create a cloudformation template to provision the Amazon Comprehend resource locally in your project under PROJECT_ROOT_DIR/amplify/predictions/NAME_OF_INTERPRET_RESOURCE folder.
+Amplify CLI provisions [Amazon Comprehend](https://aws.amazon.com/comprehend/) a natural language processing (NLP) service as backend to provide ability to interpret text and perform sentiment analysis. No machine learning experience is required for this feature. Below command and options will create a cloudformation template to provision the Amazon Comprehend resource locally in your project under PROJECT_ROOT_DIR/amplify/backend/predictions/NAME_OF_INTERPRET_RESOURCE folder.
 
 `amplify add Predictions`
 
@@ -311,5 +312,5 @@ Delete the amplify-sentimentAnalysis-lab.
     AWS Amplify Community: https://amplify.aws/community/posts
     AWS Amplify Lobby: https://gitter.im/AWS-Amplify/Lobby
     
-## SurveySurvey:
-Please help us to provide your feedback [here](https://amazonmr.au1.qualtrics.com/jfe/form/SV_3a6rNirgLrWYRW6?Session=HOL02). Participants who complete the surveys from AWS Innovate Online Conference - Data Edition will receive a gift code for USD25 in AWS credits. AWS credits will be sent via email by 30 September, 2021.
+## Survey:
+Please help us to provide your feedback [here](https://amazonmr.au1.qualtrics.com/jfe/form/SV_ehwTCMiRy46skbY?Session=HOL004). Participants who complete the surveys from AWS Innovate Online Conference - Data Edition will receive a gift code for USD25 in AWS credits. AWS credits will be sent via email by 30 September, 2021.
